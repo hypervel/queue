@@ -13,7 +13,8 @@ class JobReleasedAfterException
      */
     public function __construct(
         public string $connectionName,
-        public Job $job
+        public Job $job,
+        public ?int $backoff = null,
     ) {
     }
 }
